@@ -5,6 +5,7 @@ public class Lab2 {
         // a x B, a - const
         // type - float
         // Columns, sum of max(odd), sum of min(even)
+    	
         final float a = 5;
         float[][] B = new float[][] { 
             { 1, 2, 3 }, 
@@ -23,7 +24,7 @@ public class Lab2 {
             System.out.print('\t');
             for (int j = 0; j < B[0].length; j++) {
                 C[i][j] = (a * B[i][j]);
-                System.out.print(C[i][j] + "\s\s");
+                System.out.print(C[i][j] + "\t");
             }
             System.out.println();
         }
@@ -32,7 +33,7 @@ public class Lab2 {
         for (int i = 0; i < C.length; i += 2) {
             float min = C[0][i];
             for (int j = 1; j < C[0].length; j++) {
-                var value = C[j][i];
+            	float value = C[j][i];
                 if (value < min)
                     min = value;
             }
@@ -44,7 +45,7 @@ public class Lab2 {
         for (int i = 1; i < C.length; i += 2) {
             float max = C[0][i];
             for (int j = 1; j < C[0].length; j++) {
-                var value = C[j][i];
+                float value = C[j][i];
                 if (value > max)
                     max = value;
             }
